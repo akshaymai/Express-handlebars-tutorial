@@ -27,6 +27,14 @@ app.get('/about',(req,res)=>{
 
     })
 })
+
+
+app.get('/dashboard',(req,res)=>{
+    res.render('dashboard',{
+
+        isListEnable:true
+    })
+})
  app.listen(1973,()=>{
 
     console.log('app is running on port 1973...')
