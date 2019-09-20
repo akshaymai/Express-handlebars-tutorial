@@ -14,7 +14,7 @@ res.render('home',{
 tittle:'home page',
 name:'akshay maity',
 age:22,
-iscompleted:false
+iscompleted:Boolean
 });
 })
 
