@@ -1,7 +1,12 @@
 var express = require('express');
 var exphbs  = require('express3-handlebars');
+const path=require('path')
 var app = express();
-app.engine('handlebars', exphbs());
+app.engine('handlebars', exphbs({
+
+    defaultLayout:'main',
+    LayoutsDir:path.join(__dirname,'viwes/layouts')
+}));
 app.set('view engine', 'handlebars');
 
 app.get('/',(req,res)=>{
