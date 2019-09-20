@@ -10,12 +10,22 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars');
 
 app.get('/',(req,res)=>{
-res.render('home');
+res.render('home',{
+tittle:'home page',
+name:'akshay maity',
+age:22,
+iscompleted:false
+});
 })
 
 app.get('/about',(req,res)=>{
 
-    res.render('about')
+    res.render('about',{
+    tittle:'about page',
+    discription:'hi akshay this is my discriptiomn page'
+
+
+    })
 })
  app.listen(1973,()=>{
 
